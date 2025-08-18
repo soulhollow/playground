@@ -1,0 +1,249 @@
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header & Navigation */
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav .logo a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Main Content */
+main {
+    padding-top: 80px; /* Adjust for fixed header */
+    background-color: #fff;
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #004085;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: #333;
+}
+
+.sub-headline {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+/* Home Section Specifics */
+#home {
+    text-align: center;
+}
+
+.core-services {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-align: left;
+    margin: 4rem 0;
+}
+
+.core-services .service {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    flex: 1;
+    max-width: 320px;
+}
+
+.core-services .service a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-proof {
+    margin: 3rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+.social-proof blockquote {
+    font-size: 1.2rem;
+    border-left: 3px solid #007bff;
+    padding-left: 1.5rem;
+    margin: 0 auto 1rem auto;
+    max-width: 700px;
+}
+
+.social-proof .customer-logos {
+    margin-top: 2rem;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Services Section */
+#services .service-detail {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+.case-study {
+    background: #fff;
+    padding: 2rem;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+}
+
+.case-study p {
+    margin-bottom: 0.5rem;
+}
+
+/* About Section */
+#about .process ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* Blog Section */
+#blog .blog-posts {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#blog .blog-posts article {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex: 1;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Styles for Impressum/Datenschutz */
+body.legal-page main {
+    background-color: #fff;
+}
+.legal-page section {
+    padding-top: 2rem;
+}

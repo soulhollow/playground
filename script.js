@@ -34,4 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Cookie Banner Logic
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAcceptBtn = document.getElementById('cookie-accept');
+
+    if (cookieBanner && cookieAcceptBtn) {
+        // Check if the user has already accepted the cookies
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieBanner.style.display = 'flex';
+        }
+
+        // When the user clicks on the accept button
+        cookieAcceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieBanner.style.display = 'none';
+        });
+    }
 });

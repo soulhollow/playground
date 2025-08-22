@@ -35,7 +35,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: auto;
@@ -46,6 +46,9 @@ nav {
 nav .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 nav .logo a {
@@ -59,10 +62,10 @@ nav ul {
     gap: 1.5rem;
     margin: 0;
     padding: 0;
-    position: absolute;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
+    position: static;
+    top: auto;
+    right: auto;
+    transform: none;
 }
 
 nav ul li a {

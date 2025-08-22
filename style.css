@@ -22,7 +22,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: auto;
@@ -32,6 +32,10 @@ nav {
 nav .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 nav .logo a {
@@ -45,6 +49,8 @@ nav ul {
     gap: 1.5rem;
     margin: 0;
     padding: 0;
+    flex: 2;
+    justify-content: center;
 }
 
 nav ul li a {

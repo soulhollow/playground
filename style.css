@@ -1,17 +1,31 @@
+:root {
+    --dark-blue: #162e6f;
+    --light-blue: #2498be;
+    --dark-green: #0d7254;
+    --dark-green-hover: #0a5a43;
+
+    --text-color: #333;
+    --text-color-light: #555;
+    --background-light: #f9f9f9;
+    --background-light-blue: #e9f5fa; /* Very light blue tint */
+    --white: #fff;
+    --border-color: #ddd;
+}
+
 /* General Body Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
     background-color: #f4f4f4;
 }
 
 /* Header & Navigation */
 header {
-    background: #fff;
-    color: #333;
-    padding: 1rem 0;
+    background: var(--white);
+    color: var(--text-color);
+    padding: 1.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -27,19 +41,19 @@ nav {
     max-width: 1200px;
     margin: auto;
     padding: 0 2rem;
+    position: relative;
 }
 
 nav .logo {
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex: 1;
+    justify-content: flex-start;
 }
 
 nav .logo a {
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -49,25 +63,27 @@ nav ul {
     gap: 1.5rem;
     margin: 0;
     padding: 0;
-    flex: 2;
-    justify-content: center;
+    position: static;
+    top: auto;
+    right: auto;
+    transform: none;
 }
 
 nav ul li a {
-    color: #555;
+    color: var(--text-color-light);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: var(--dark-green);
 }
 
 /* Main Content */
 main {
-    padding-top: 80px; /* Adjust for fixed header */
-    background-color: #fff;
+    padding-top: 100px; /* Adjust for fixed header */
+    background-color: var(--white);
 }
 
 section {
@@ -76,9 +92,6 @@ section {
     margin: auto;
 }
 
-section:nth-of-type(even) {
-    background-color: #f9f9f9;
-}
 
 h1 {
     font-size: 3rem;
@@ -89,17 +102,21 @@ h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: #004085;
+    color: var(--dark-blue);
 }
 
 h3 {
     font-size: 1.75rem;
-    color: #333;
+    color: var(--text-color);
+}
+
+.core-services .service h3, .case-study h3 {
+    color: var(--light-blue);
 }
 
 .sub-headline {
     font-size: 1.25rem;
-    color: #555;
+    color: var(--text-color-light);
     max-width: 800px;
     margin: 0 auto 3rem auto;
     text-align: center;
@@ -119,16 +136,17 @@ h3 {
 }
 
 .core-services .service {
-    background: #fff;
+    background: var(--white);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     flex: 1;
     max-width: 320px;
+    border: 1px solid var(--dark-green);
 }
 
 .core-services .service a {
-    color: #007bff;
+    color: var(--light-blue);
     text-decoration: none;
     font-weight: bold;
 }
@@ -136,12 +154,12 @@ h3 {
 .social-proof {
     margin: 3rem 0;
     font-style: italic;
-    color: #555;
+    color: var(--text-color-light);
 }
 
 .social-proof blockquote {
     font-size: 1.2rem;
-    border-left: 3px solid #007bff;
+    border-left: 3px solid var(--dark-blue);
     padding-left: 1.5rem;
     margin: 0 auto 1rem auto;
     max-width: 700px;
@@ -155,8 +173,8 @@ h3 {
 
 .cta-button {
     display: inline-block;
-    background: #007bff;
-    color: #fff;
+    background: var(--dark-green);
+    color: var(--white);
     padding: 1rem 2.5rem;
     text-decoration: none;
     border-radius: 5px;
@@ -167,7 +185,7 @@ h3 {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--dark-green-hover);
     transform: translateY(-2px);
 }
 
@@ -175,15 +193,15 @@ h3 {
 #services .service-detail {
     margin-bottom: 3rem;
     padding: 2rem;
-    background: #fff;
+    background: var(--white);
     border-radius: 5px;
 }
 
 /* Projects Section */
 .case-study {
-    background: #fff;
+    background: var(--white);
     padding: 2rem;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid var(--dark-green);
     border-radius: 5px;
 }
 
@@ -205,7 +223,7 @@ h3 {
 }
 
 #blog .blog-posts article {
-    background: #fff;
+    background: var(--white);
     padding: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -219,7 +237,7 @@ h3 {
 
 /* Footer */
 footer {
-    background: #333;
+    background: var(--text-color);
     color: #ccc;
     text-align: center;
     padding: 2rem 0;
@@ -237,18 +255,18 @@ footer ul li {
 }
 
 footer a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #007bff;
+    color: var(--light-blue);
 }
 
 /* Styles for Impressum/Datenschutz */
 body.legal-page main {
-    background-color: #fff;
+    background-color: var(--white);
 }
 .legal-page section {
     padding-top: 2rem;
@@ -278,7 +296,7 @@ body.legal-page main {
 #projects .case-study {
     flex: 1;
     max-width: 400px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -296,7 +314,7 @@ body.legal-page main {
 .process-list li {
     flex: 1;
     min-width: 280px;
-    background: #f9f9f9;
+    background: var(--background-light);
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid #eee;
@@ -311,7 +329,7 @@ body.legal-page main {
 }
 
 .info-box {
-    background-color: #e9ecef;
+    background-color: var(--background-light);
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 3rem;
@@ -336,7 +354,7 @@ body.legal-page main {
     width: 25px;
     height: 3px;
     margin: 5px 0;
-    background-color: #333;
+    background-color: var(--text-color);
     transition: all 0.3s ease-in-out;
 }
 
@@ -347,9 +365,9 @@ body.legal-page main {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 70px; /* Height of the header */
+        top: 98px; /* Height of the header */
         left: 0;
-        background-color: #fff;
+        background-color: var(--white);
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
@@ -366,6 +384,10 @@ body.legal-page main {
 
     nav .hamburger {
         display: block;
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     /* Hamburger animation to 'X' */
@@ -407,7 +429,7 @@ body.legal-page main {
     left: 0;
     width: 100%;
     background: #222;
-    color: #fff;
+    color: var(--white);
     padding: 1.5rem;
     text-align: center;
     z-index: 1001;
@@ -424,13 +446,13 @@ body.legal-page main {
 }
 
 #cookie-banner a {
-    color: #007bff;
+    color: var(--light-blue);
     text-decoration: underline;
 }
 
 #cookie-banner button {
-    background: #007bff;
-    color: #fff;
+    background: var(--dark-green);
+    color: var(--white);
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
@@ -440,5 +462,5 @@ body.legal-page main {
 }
 
 #cookie-banner button:hover {
-    background-color: #0056b3;
+    background-color: var(--dark-green-hover);
 }

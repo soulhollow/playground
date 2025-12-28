@@ -21,8 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
+        const isActive = navLinks.classList.toggle('nav-active');
         hamburger.classList.toggle('is-active');
+        
+        // Update ARIA attributes
+        hamburger.setAttribute('aria-expanded', isActive);
+        hamburger.setAttribute('aria-label', isActive ? 'Menü schließen' : 'Menü öffnen');
     });
 
     // Close mobile menu when a link is clicked
@@ -38,17 +42,29 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cookie Banner Logic
     const cookieBanner = document.getElementById('cookie-banner');
     const cookieAcceptBtn = document.getElementById('cookie-accept');
+    const cookieDeclineBtn = document.getElementById('cookie-decline');
 
-    if (cookieBanner && cookieAcceptBtn) {
-        // Check if the user has already accepted the cookies
-        if (!localStorage.getItem('cookiesAccepted')) {
+    if (cookieBanner) {
+        // Check if the user has already made a choice
+        const cookieChoice = localStorage.getItem('cookieChoice');
+        if (!cookieChoice) {
             cookieBanner.style.display = 'flex';
         }
 
         // When the user clicks on the accept button
-        cookieAcceptBtn.addEventListener('click', () => {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookieBanner.style.display = 'none';
-        });
+        if (cookieAcceptBtn) {
+            cookieAcceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieChoice', 'accepted');
+                cookieBanner.style.display = 'none';
+            });
+        }
+
+        // When the user clicks on the decline button
+        if (cookieDeclineBtn) {
+            cookieDeclineBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieChoice', 'declined');
+                cookieBanner.style.display = 'none';
+            });
+        }
     }
 });

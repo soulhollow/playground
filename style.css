@@ -32,6 +32,28 @@
     }
 }
 
+/* Skip Navigation Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--dark-green);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus Indicators */
+*:focus-visible {
+    outline: 2px solid var(--dark-green);
+    outline-offset: 2px;
+}
+
 /* General Body Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -212,6 +234,42 @@ h3 {
     transform: translateY(-2px);
 }
 
+.cta-button-primary {
+    background: linear-gradient(135deg, #0d7254 0%, #0a5a43 100%) !important;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.ki-calculator-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(13, 114, 84, 0.1) 0%, rgba(36, 152, 190, 0.1) 100%);
+    border-radius: 12px;
+    border: 2px solid rgba(13, 114, 84, 0.2);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.ki-calculator-cta h3 {
+    color: #0d7254;
+    margin-bottom: 1rem;
+}
+
+.ki-calculator-cta p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.ki-calculator-cta .cta-button {
+    margin-top: 0;
+}
+
 /* Services Section */
 #services .service-detail {
     margin-bottom: 3rem;
@@ -263,10 +321,12 @@ h3 {
 
 /* Footer */
 footer {
-    background: var(--text-color);
-    color: #ccc;
+    background: var(--background-light);
+    color: var(--text-color-light);
     text-align: center;
     padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 footer ul {
@@ -281,13 +341,13 @@ footer ul li {
 }
 
 footer a {
-    color: var(--white);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 footer a:hover {
-    color: var(--light-blue);
+    color: var(--dark-green);
 }
 
 /* Styles for Impressum/Datenschutz */
@@ -376,16 +436,16 @@ body.legal-page main {
 }
 
 @media (prefers-color-scheme: dark) {
-    #nutzen > div[style*="gradient"] {
+    .ki-calculator-cta {
         background: linear-gradient(135deg, rgba(13, 114, 84, 0.2) 0%, rgba(36, 152, 190, 0.2) 100%) !important;
         border-color: rgba(13, 114, 84, 0.3) !important;
     }
     
-    #nutzen > div[style*="gradient"] h3 {
+    .ki-calculator-cta h3 {
         color: #4ade80 !important;
     }
     
-    #nutzen > div[style*="gradient"] p {
+    .ki-calculator-cta p {
         color: #9ca3af !important;
     }
 }
@@ -511,6 +571,12 @@ body.legal-page main {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
+}
+
+#cookie-banner button {
+    min-height: 44px;
+    min-width: 120px;
+    margin: 0.5rem 0;
 }
 
 #cookie-banner button:hover {

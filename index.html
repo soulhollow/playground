@@ -2,18 +2,68 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ai-consult.one - KI-Integration für den Mittelstand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>ai-consult.one | KI-Automatisierung für den Mittelstand - Bis zu 80% Zeitersparnis</title>
+    <meta name="description" content="ai-consult.one - KI-Integration für den Mittelstand. Wir automatisieren Ihre Geschäftsprozesse mit praxisorientierten KI-Lösungen. Kostenlosen Strategie-Workshop anfragen!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-consult.one/">
+    <meta property="og:title" content="ai-consult.one - KI-Integration für den Mittelstand">
+    <meta property="og:description" content="Wir machen Künstliche Intelligenz nutzbar – verständlich, pragmatisch, messbar!">
+    <meta property="og:image" content="https://ai-consult.one/Design.svg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ai-consult.one/">
+    <meta name="twitter:title" content="ai-consult.one - KI-Integration für den Mittelstand">
+    <meta name="twitter:description" content="Praxisorientierte KI- und Automatisierungslösungen für den Mittelstand">
+    <meta name="twitter:image" content="https://ai-consult.one/Design.svg">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://ai-consult.one/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="Design.svg">
+    
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ai-consult.one",
+      "description": "KI-Integration für den Mittelstand",
+      "url": "https://ai-consult.one",
+      "logo": "https://ai-consult.one/Design.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49-1523-4040969",
+        "email": "info@ai-consult.one",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Blumhardtstraße 1",
+        "postalCode": "70771",
+        "addressLocality": "Leinfelden-Echterdingen",
+        "addressCountry": "DE"
+      },
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
     <header>
         <nav>
             <div class="logo">
-                <a href="#home"><img src="Design.svg" alt="ai-consult.one Logo" height="50"></a>
+                <a href="#home"><img src="Design.svg" alt="ai-consult.one Logo" height="50" loading="eager"></a>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="main-navigation">
                 <li><a href="#home">Startseite</a></li>
                 <li><a href="#services">Leistungen</a></li>
                 <li><a href="#projects">Projekte</a></li>
@@ -21,7 +71,7 @@
                 <li><a href="ki-rechner.html">KI-Rechner</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
-            <button class="hamburger" id="hamburger-menu">
+            <button class="hamburger" id="hamburger-menu" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-navigation">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -29,12 +79,12 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="home">
             <h1>Wir machen Künstliche Intelligenz nutzbar – verständlich, pragmatisch, messbar!</h1>
             <p class="sub-headline">ai-consult.one ist ein Team erfahrener Spezialisten für praxisorientierte KI- und Automatisierungslösungen im Mittelstand.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                <a href="ki-rechner.html" class="cta-button" style="background: linear-gradient(135deg, #0d7254 0%, #0a5a43 100%);">🚀 KI-Einsparungspotential berechnen</a>
+            <div class="cta-group">
+                <a href="ki-rechner.html" class="cta-button cta-button-primary">🚀 KI-Einsparungspotential berechnen</a>
                 <a href="#contact" class="cta-button">Jetzt kostenlosen Strategie-Workshop anfragen</a>
             </div>
         </section>
@@ -131,10 +181,10 @@
                     <p>Wir befähigen Ihr Team und sorgen für nachhaltigen Kompetenzaufbau.</p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(13, 114, 84, 0.1) 0%, rgba(36, 152, 190, 0.1) 100%); border-radius: 12px; border: 2px solid rgba(13, 114, 84, 0.2);">
-                <h3 style="color: #0d7254; margin-bottom: 1rem;">💡 Wie viel können Sie mit KI sparen?</h3>
-                <p style="margin-bottom: 1.5rem; color: #555;">Nutzen Sie unseren interaktiven Rechner und erfahren Sie in 2 Minuten Ihr individuelles Einsparungspotential.</p>
-                <a href="ki-rechner.html" class="cta-button" style="margin-top: 0;">🚀 Jetzt Einsparungen berechnen</a>
+            <div class="ki-calculator-cta">
+                <h3>💡 Wie viel können Sie mit KI sparen?</h3>
+                <p>Nutzen Sie unseren interaktiven Rechner und erfahren Sie in 2 Minuten Ihr individuelles Einsparungspotential.</p>
+                <a href="ki-rechner.html" class="cta-button">🚀 Jetzt Einsparungen berechnen</a>
             </div>
         </section>
 
@@ -148,8 +198,8 @@
                     <li><strong>3. Aufbau Ihrer KI-Roadmap</strong> für den nachhaltigen Erfolg.</li>
                 </ol>
             </div>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-                <a href="ki-rechner.html" class="cta-button" style="background: linear-gradient(135deg, #0d7254 0%, #0a5a43 100%);">🚀 Erst Potential berechnen</a>
+            <div class="cta-group">
+                <a href="ki-rechner.html" class="cta-button cta-button-primary">🚀 Erst Potential berechnen</a>
                 <a href="mailto:info@ai-consult.one" class="cta-button">Termin für kostenfreien Strategie-Workshop anfragen</a>
             </div>
         </section>
@@ -164,10 +214,15 @@
     </footer>
 
     <div id="cookie-banner">
-        <p>
-            Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Durch die weitere Nutzung dieser Website stimmen Sie der Verwendung von Cookies zu. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
-        </p>
-        <button id="cookie-accept">Akzeptieren</button>
+        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem;">
+            <p style="margin: 0; flex: 1; min-width: 300px;">
+                Wir verwenden nur technisch notwendige Cookies für die Funktionalität dieser Website. Es werden keine Tracking- oder Marketing-Cookies eingesetzt. Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-shrink: 0;">
+                <button id="cookie-accept">Verstanden</button>
+                <button id="cookie-decline" style="background: #6b7280;">Ablehnen</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

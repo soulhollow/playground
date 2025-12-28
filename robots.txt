@@ -1,0 +1,11 @@
+# ai-consult.one robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ai-consult.one/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+

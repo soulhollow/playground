@@ -7,9 +7,29 @@
     --text-color: #333;
     --text-color-light: #555;
     --background-light: #f9f9f9;
-    --background-light-blue: #e9f5fa; /* Very light blue tint */
+    --background-light-blue: #e9f5fa;
     --white: #fff;
     --border-color: #ddd;
+    --body-bg: #f4f4f4;
+    --section-bg: #fff;
+    --card-shadow: rgba(0,0,0,0.08);
+}
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e5e7eb;
+        --text-color-light: #9ca3af;
+        --background-light: #1e293b;
+        --background-light-blue: #1e3a5f;
+        --white: #0f172a;
+        --border-color: #374151;
+        --body-bg: #0f172a;
+        --section-bg: #1e293b;
+        --card-shadow: rgba(0,0,0,0.3);
+        --dark-blue: #4ade80;
+        --light-blue: #60a5fa;
+    }
 }
 
 /* General Body Styles */
@@ -18,7 +38,8 @@ body {
     margin: 0;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #f4f4f4;
+    background-color: var(--body-bg);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Header & Navigation */
@@ -83,7 +104,8 @@ nav ul li a:hover {
 /* Main Content */
 main {
     padding-top: 100px; /* Adjust for fixed header */
-    background-color: var(--white);
+    background-color: var(--section-bg);
+    transition: background-color 0.3s;
 }
 
 section {
@@ -139,10 +161,11 @@ h3 {
     background: var(--white);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px var(--card-shadow);
     flex: 1;
     max-width: 320px;
     border: 1px solid var(--dark-green);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .core-services .service a {
@@ -195,6 +218,7 @@ h3 {
     padding: 2rem;
     background: var(--white);
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 /* Projects Section */
@@ -203,6 +227,7 @@ h3 {
     padding: 2rem;
     border-left: 5px solid var(--dark-green);
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .case-study p {
@@ -226,8 +251,9 @@ h3 {
     background: var(--white);
     padding: 1.5rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--card-shadow);
     flex: 1;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 /* Contact Section */
@@ -299,7 +325,8 @@ body.legal-page main {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--card-shadow);
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .process-list {
@@ -317,7 +344,8 @@ body.legal-page main {
     background: var(--background-light);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 #about .process-list li {
@@ -333,10 +361,33 @@ body.legal-page main {
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 3rem;
+    transition: background-color 0.3s;
 }
 
 .info-box p {
     margin: 0;
+}
+
+/* KI-Rechner Call-to-Action Box */
+#nutzen > div[style*="gradient"] {
+    background: linear-gradient(135deg, rgba(13, 114, 84, 0.1) 0%, rgba(36, 152, 190, 0.1) 100%) !important;
+    border: 2px solid rgba(13, 114, 84, 0.2) !important;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+    #nutzen > div[style*="gradient"] {
+        background: linear-gradient(135deg, rgba(13, 114, 84, 0.2) 0%, rgba(36, 152, 190, 0.2) 100%) !important;
+        border-color: rgba(13, 114, 84, 0.3) !important;
+    }
+    
+    #nutzen > div[style*="gradient"] h3 {
+        color: #4ade80 !important;
+    }
+    
+    #nutzen > div[style*="gradient"] p {
+        color: #9ca3af !important;
+    }
 }
 
 
@@ -464,4 +515,159 @@ body.legal-page main {
 
 #cookie-banner button:hover {
     background-color: var(--dark-green-hover);
+}
+
+/* ========================================
+   DARK MODE STYLES
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* Header & Navigation */
+    header {
+        background: #1e293b;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    nav .logo a {
+        color: var(--text-color);
+    }
+
+    nav ul li a {
+        color: var(--text-color-light);
+    }
+
+    nav ul li a:hover {
+        color: #4ade80;
+    }
+
+    /* Headings */
+    h1, h2, h3 {
+        color: var(--text-color);
+    }
+
+    h2 {
+        color: #4ade80;
+    }
+
+    .core-services .service h3,
+    .case-study h3 {
+        color: #60a5fa;
+    }
+
+    /* Subheadline */
+    .sub-headline {
+        color: var(--text-color-light);
+    }
+
+    /* CTA Buttons - keep green but adjust */
+    .cta-button {
+        background: #0d7254;
+        color: #fff;
+    }
+
+    .cta-button:hover {
+        background: #0a5a43;
+    }
+
+    /* Services & Cards */
+    .core-services .service {
+        background: #1e293b;
+        border-color: #4ade80;
+    }
+
+    .core-services .service a {
+        color: #60a5fa;
+    }
+
+    #services .service-detail {
+        background: #1e293b;
+    }
+
+    /* Social Proof */
+    .social-proof blockquote {
+        border-left-color: #4ade80;
+        color: var(--text-color-light);
+    }
+
+    /* Case Studies */
+    .case-study {
+        background: #1e293b;
+        border-left-color: #4ade80;
+    }
+
+    #projects .case-study {
+        background: #1e293b;
+        border-color: #374151;
+    }
+
+    /* Process List */
+    .process-list li {
+        background: #1e293b;
+        border-color: #374151;
+    }
+
+    /* Info Box */
+    .info-box {
+        background: #1e293b;
+    }
+
+    /* Blog Posts */
+    #blog .blog-posts article {
+        background: #1e293b;
+    }
+
+    /* Footer */
+    footer {
+        background: #0f172a;
+        color: #9ca3af;
+    }
+
+    footer a {
+        color: #e5e7eb;
+    }
+
+    footer a:hover {
+        color: #60a5fa;
+    }
+
+    /* Mobile Navigation */
+    nav .nav-links {
+        background-color: #1e293b;
+    }
+
+    nav .nav-links li {
+        border-top-color: #374151;
+    }
+
+    .hamburger span {
+        background-color: var(--text-color);
+    }
+
+    /* Cookie Banner */
+    #cookie-banner {
+        background: #1e293b;
+        color: var(--text-color);
+    }
+
+    #cookie-banner a {
+        color: #60a5fa;
+    }
+
+    #cookie-banner button {
+        background: #0d7254;
+    }
+
+    #cookie-banner button:hover {
+        background: #0a5a43;
+    }
+
+    /* Legal Pages */
+    body.legal-page main {
+        background-color: #1e293b;
+    }
+
+    /* Smooth transitions for all color changes */
+    * {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
 }
